@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {  GetEmployees } from "../features/employees/employeesSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function Employees() {
   const { isLoading, isError, error, employees } = useSelector(
     (state) => state.employees,
   );
   const dispatch = useDispatch();
+  const navitage=useNavigate();
   useEffect(() => {
     dispatch(GetEmployees());
   }, [dispatch]);
 //handle modal
-const handleModal=(employeeID)=>{
-  alert(`you clicked on employee with id: ${employeeID}`)
+const handleModal=(employeeId)=>{
+  // alert(`you clicked on employee with id: ${employeeId}`)
+  navitage(`/employees/${employeeId}`)
+
 }
 
  // 🔄 Loading state

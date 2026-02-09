@@ -4,6 +4,7 @@ import Counter from "../../Pages/Counter";
 import TasksManegment from "../../Pages/TasksManegment";
 import Employees from "../../Pages/Employees";
 import AddEmployee from "../../Pages/AddEmployees";
+import EmployeeDetails from "../../Pages/EmployeeDetails";
 
 export const UserRouter = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const UserRouter = createBrowserRouter([
       {
         path: "/employees",
         element: <Employees />,
+      },
+      {
+        path: "/employees/:employeeId",
+        element: <EmployeeDetails />,
       },
       {
         path: "/add-employees",

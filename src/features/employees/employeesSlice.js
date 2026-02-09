@@ -19,11 +19,15 @@ export const AddEmployees = createAsyncThunk(
     return res.json();
   },
 );
+export const Employee=createAsyncThunk("employees/Employee",async(employeeId)=>{
+  const res= await fetch(`http://localhost:3000/employees/${employeeId}`)
+   return res.json();
+})
 export const EditEmployee = createAsyncThunk(
   "employees/EditEmployee",
-  async (employeeId, editedEmployeesData) => {
+  async ({employeeId, editedEmployeesData}) => {
     const res = await fetch(`http://localhost:3000/employees/${employeeId}`, {
-      mathod: "PUT",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -43,6 +47,7 @@ export const DeleteEmployees = createAsyncThunk(
 );
 const initialState = {
   employees: [],
+  employee:{},
   isLoading: false,
   isError: false,
   error: null,
@@ -76,7 +81,7 @@ const employeesSlice = createSlice({
       .addCase(AddEmployees.rejected, (state, action) => {
         ((state.isError = true),
           (state.error = action.payload.message || "there is an error"));
-      })
+      })//
       .addCase(EditEmployee.pending, (state) => {
         state.isLoading = true;
       })
@@ -92,7 +97,7 @@ const employeesSlice = createSlice({
         ((state.isLoading = false),
           (state.isError = true),
           (state.error = action.payload));
-      })
+      })//
       .addCase(DeleteEmployees.pending, (state) => {
         state.isLoading = true;
       })
@@ -105,7 +110,19 @@ const employeesSlice = createSlice({
         ((state.isLoading = false),
           (state.isError = true),
           (state.error = action.payload.message || "there is an error"));
-      });
+      })//
+      .addCase(Employee.pending, (state) => {
+        ((state.isLoading = true), (state.isError = false));
+      })
+      .addCase(Employee.fulfilled, (state, action) => {
+        ((state.isLoading = false),
+          (state.isError = false),
+          (state.employee = action.payload));
+        })
+      .addCase(Employee.rejected, (state, action) => {
+        ((state.isError = true),
+          (state.error = action.payload.message || "there is an error"));
+      })
   },
 });
 export default employeesSlice.reducer;

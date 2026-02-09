@@ -1,3 +1,1 @@
-there will be two page one for counter and others is for todo or tast 
-without database 
-// secound layer will be with  database and redux thank 
+make a curd oparation with reduxjs-toolkit rtk-qury

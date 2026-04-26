@@ -13,6 +13,12 @@ export default function Nav() {
                 <li className='hover:text-amber-100'><NavLink to='/tasks' className={({isActive})=> isActive ? 'text-amber-100' : ''}>
                     tasks
                     </NavLink></li>
+                <li className='hover:text-amber-100'><NavLink to='/employees' className={({isActive})=> isActive ? 'text-amber-100' : ''}>
+                    employees
+                    </NavLink></li>
+                <li className='hover:text-amber-100'><NavLink to='/add-employees' className={({isActive})=> isActive ? 'text-amber-100' : ''}>
+                    AddEmployees
+                    </NavLink></li>
             </ul>
         </nav>
     </>

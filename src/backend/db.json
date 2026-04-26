@@ -1,0 +1,46 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "department": "Product",
+      "isActive": true
+    },
+    {
+      "name": "Emily Johnson",
+      "position": "UX Designer",
+      "department": "Design",
+      "isActive": true,
+      "id": "3"
+    },
+    {
+      "id": "df15",
+      "name": "Sahadat",
+      "department": "Engineering",
+      "position": "Frontend Engineere",
+      "isActive": true
+    },
+    {
+      "id": "0e85",
+      "name": "asd",
+      "department": "234234",
+      "position": "sdfsdf",
+      "isActive": true
+    },
+    {
+      "id": "ee9d",
+      "name": "asdfasf",
+      "department": "sdfadf",
+      "position": "sdrewasdf",
+      "isActive": false
+    }
+  ]
+}

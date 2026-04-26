@@ -1,16 +1,51 @@
-# React + Vite
+# React Redux Toolkit Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application built with Vite, Redux Toolkit, React Router, and Tailwind CSS.
+##screenshot
+![alt text](<src/assets/Screenshot (181).png>)
+![alt text](<src/assets/Screenshot (182).png>)
+![alt text](<src/assets/Screenshot (183).png>)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Redux Toolkit** - State management with slices and RTK Query
+- **React Router** - Client-side routing with user authentication flow
+- **Tailwind CSS** - Utility-first CSS framework
+- **JSON Server** - Mock REST API for development
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. Start the development server:
+   ```bash
+   npm run start
+   ```
+   This runs both the JSON server (port 3000) and Vite dev server.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. For separate execution:
+   - Run only dev server: `npm run dev`
+   - Run only JSON server: `npm run json-server`
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── features/       # Redux slices (counter, employees)
+├── layout/         # Layout components
+├── pages/          # Page components
+├── store/          # Redux store configuration
+└── backend/        # JSON server database
+```
+
+## Tech Stack
+
+- React 19
+- Redux Toolkit 2.x
+- React Router DOM 7
+- Tailwind CSS 4
+- Vite

@@ -15,10 +15,10 @@ export const UserRouter = createBrowserRouter([
         path: "/counter",
         element: <Counter />,
       },
-      {
-        path: "/tasks",
-        element: <TasksManegment />,
-      },
+      // {
+      //   path: "/tasks",
+      //   element: <TasksManegment />,
+      // },
       {
         path: "/employees",
         element: <Employees />,

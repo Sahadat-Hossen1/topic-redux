@@ -10,9 +10,9 @@ export default function Nav() {
                 <li className='hover:text-amber-100'><NavLink to='/counter' className={({isActive})=> isActive ? 'text-amber-100' : ''}>
                     counter
                     </NavLink></li>
-                <li className='hover:text-amber-100'><NavLink to='/tasks' className={({isActive})=> isActive ? 'text-amber-100' : ''}>
+                {/* <li className='hover:text-amber-100'><NavLink to='/tasks' className={({isActive})=> isActive ? 'text-amber-100' : ''}>
                     tasks
-                    </NavLink></li>
+                    </NavLink></li> */}
                 <li className='hover:text-amber-100'><NavLink to='/employees' className={({isActive})=> isActive ? 'text-amber-100' : ''}>
                     employees
                     </NavLink></li>
